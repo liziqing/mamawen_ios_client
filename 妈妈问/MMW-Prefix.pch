@@ -1,0 +1,92 @@
+
+//
+//  MMW-Prefix.pch
+//  妈妈问
+//
+//  Created by lixuan on 15/3/3.
+//  Copyright (c) 2015年 lixuan. All rights reserved.
+//
+
+#ifndef ____MMW_Prefix_pch
+#define ____MMW_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define kLeftViewTaped  @"kLeftViewTaped"
+#define kRightViewTaped @"kRightViewTaped"
+
+#define kWight 60
+
+#define iphone6 [UIScreen mainScreen].bounds.size.height > 600
+#define IOS8    [[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0
+
+#define kScreenWidth    [[UIScreen mainScreen] bounds].size.width
+#define kScreenHeight   [[UIScreen mainScreen] bounds].size.height
+#define kNavigationBarMaxY CGRectGetMaxY(self.navigationController.navigationBar.frame)
+#define kSeviceViewHeight 80 
+
+#define kTabbarBtnIdentify   @"TabbarBtnIdentify"
+#define kHasLoginOrRegister  @"kHasLoginOrRegister"
+#define kAddPatientInfo      @"kAddPatientInfo"
+
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <Availability.h>
+
+#import "ShowAlertView.h"
+
+typedef NS_ENUM(NSInteger, chatMode)  { // 聊天类型
+    chatModeNone = 0,
+    chatModeString,
+    chatModePicture,
+    chatModeVideo,
+    
+};
+typedef NS_ENUM (NSInteger, chatRole) {// 信息角色
+    chatRoleDoctor = 0,
+    chatRolePatient,
+};
+typedef NS_ENUM (NSInteger, chatCatagory) { // 信息分类
+    chatCatagoryNormal = 1,
+    chatCatagoryAdmissions,
+    chatCatagoryPrediagnosisReport,
+};
+
+typedef NS_ENUM(NSInteger, enteringType) {
+    enteringTypeTemperature = 0,  // 备孕体温
+    enteringTypeBabyHead,         // 宝宝头围
+    enteringTypeBabyBody,         //宝宝身长
+    enteringTypeBabyEat,          // 奶量
+    enteringTypeBabyWeight,       // 宝宝体重
+    enteringTypeMomAbdomen,       // 腹围
+    enteringTypeBloodPressure,    //血压
+    enteringTypeMomWeight,        // 孕期体重
+    
+};
+
+#define kIsOpenNewMessageNote       @"kIsOpenNewMessageNote"
+#define kIsOpenNewMessageNoteDetail @"kIsOpenNewMessageNoteDetail"
+#define kIsOpenSound                @"kIsOpenSound"
+#define kIsOpenVibrate              @"kIsOpenVibrate"
+
+
+#define kMessageFormUser     @"kMessageFormUser"
+#define kMessageToUser       @"kMessageToUser"
+
+#define kBaseURL             @"http://115.159.49.31:9000"
+#define kIMIP                @"182.254.222.156"
+
+#define kUserNameIdentify            @"kUserNameIdentify"
+#define kPassWordIdentify            @"kPassWordIdentify"
+#define kUserID                      @"kUserID"
+#define kSessionKey                  @"kSessionKey"
+#define kDeviceToken                 @"kDeviceToken"
+#define kCellPhone                   @"kCellPhone"
+#define kUserJid                     @"kUserJid"
+#define kXmmpToken                   @"kXmmpToken"
+
+#define kReceiveMessageNotification  @"kReceiveMessageNotification"  // 收到信息通知  -- 刷新信息列表
+#define kInquiryID                   @"kInquiryID"
+#endif
